@@ -5,11 +5,9 @@ namespace BandsApp.Web
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
             var app = builder.Build();
-
-            app.MapGet("/", () => "Hello World, we're back!");
-            app.MapGet("/", () => "Hello World, we're back again!");
-
+            app.MapControllers();
             app.Run();
         }
     }
