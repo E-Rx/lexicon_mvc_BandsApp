@@ -19,7 +19,8 @@ public class BandsController : Controller
 
     public IActionResult Details(int id)
     {
-        return Content($"Details, Id: {id}");
+        var band = bandService.GetById(id);
+        return View(band);
     }
 
 }
