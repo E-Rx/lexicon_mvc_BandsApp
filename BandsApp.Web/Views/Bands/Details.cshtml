@@ -13,6 +13,13 @@
     <img src="@Url.Content(Model.ImagePath)" alt="band image" style="width:300px;" />
     
     <iframe width="560" height="315" src=@Model.VideoUrl title="@Model.Name video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3>Album </h3>
+    <ul>
+        @foreach (var album in Model.Albums)
+        {
+            <li> @album</li>
+        }
 
+    </ul>
 </body>
 </html>

@@ -8,5 +8,6 @@ namespace BandsApp.Web.Models
         public string Description { get; set; } = null!;
         public string ImagePath { get; set; } = null!;
         public string VideoUrl { get; set; } = null!;
+        public string[] Albums { get; set; } = null!;
     }
 }
