@@ -10,5 +10,13 @@ namespace BandsApp.Web.Services
            new Band { Id = 3, Name = "Alanis Morrissette", Description ="A Canadian musician known for her confessional lyrics and a layered rock-influenced sound."}
          ];
 
+        public Band? GetById(int id) => bands
+            .SingleOrDefault(b => b.Id == id);
+
+        public Band[] GetAllBands() => bands
+            .OrderBy(o => o.Name)
+            .ToArray();
+
+
     }
 }
