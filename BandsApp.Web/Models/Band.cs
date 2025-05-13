@@ -1,4 +1,5 @@
-﻿namespace BandsApp.Web.Models
+﻿
+namespace BandsApp.Web.Models
 {
     public class Band
     {

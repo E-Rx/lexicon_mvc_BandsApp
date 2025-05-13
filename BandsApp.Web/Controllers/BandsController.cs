@@ -1,6 +1,25 @@
-﻿namespace BandsApp.Web.Controllers
+﻿using BandsApp.Web.Models;
+using BandsApp.Web.Services;
+using Microsoft.AspNetCore.Mvc;
+
+
+namespace BandsApp.Web.Controllers;
+
+public class BandsController : Controller
 {
-    public class BandsController
+    BandService bandService = new BandService(); 
+
+    [Route("")]
+    public IActionResult Index()
     {
+        var bands = bandService.GetAllBands();
+        return View(bands);
     }
+    [Route ("details/{id}")]
+
+    public IActionResult Details(int id)
+    {
+        return Content($"Details, Id: {id}");
+    }
+
 }
