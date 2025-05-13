@@ -17,10 +17,5 @@ namespace BandsApp.Web.Services
             .OrderBy(o => o.Name)
             .ToArray();
 
-        //test
-        //test2
-        //test3
-        //test4
-
     }
 }
